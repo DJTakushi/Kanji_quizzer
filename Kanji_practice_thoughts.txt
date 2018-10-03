@@ -1,0 +1,3 @@
+Kanji Practice Requirements
+1.  Shall prompt user with example words/phrases in hiragana that contain Kanji.
+2.  Based on an input argument, shall wait for either user input or for a timer to expire after being prompted, and then display the writing target.

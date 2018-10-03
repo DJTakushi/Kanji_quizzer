@@ -1,0 +1,51 @@
+Present prompt (English text) for kanji drilling
+1)  Choose a random kanji from a Kanji_list
+2)  Choose a random word that contains that Kanji
+3)  User confirms 'ready', machine displays word in Kanji
+4)  If user marks pass, remove decrement that specific kanji's remainingCount from Kanji_list
+5)  If that kanji's remainingCount is 0, remove it from the list
+***************************
+INPUTS:
+•kanji_list.csv
+ •list of all raw Kanji to be quizzed
+•word_list.csv
+ •list of all available words to quizz with
+
+GENERATES:
+•KanjiTankDict{}
+  •key = KanjiIdentifier
+  •value = KanjiData
+   •remainingCount
+   •kanjiWordList() that can be used to quizz
+    •EnglishText
+    •JapaneseText
+
+***************************
+#STRUCTURES
+kanjiData (TYPE)
+•remainingCount
+•kanjiWordList that can be used to quizz
+ 
+Word (TYPE)
+•EnglishText
+•JapaneseText
+ 
+***************************
+#FUNCTIONS
+KanjiTankDict generateTankList()
+•create dict of KanjiTest item
+ •for each item in kanji_list.csv
+  •key = KanjiIdentifier
+  •value = KanjiData with stock remainingCount & empty 
+•add words
+ •for each word in word_list.csv
+  •for each character in word
+   •check KanjiTest to see if that character exists
+    •if so, add the word to the kanjiWordList
+    
+void exportDictionary()
+•exports csv
+ •kanji, counts, words-words-words
+
+quiz()
+•see above
