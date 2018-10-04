@@ -14,9 +14,12 @@ class word:
         return self.Kana
     
 class kanjiData:
+    kanjiCount = 0
+
     def __init__(self):
         self.remainingCount = 0
         self.kanjiWordList = [] #() may also work
+        kanjiCount =+ 1
 
     def addWord(self, inputWord):
         self.kanjiWordList.append(inputWord)

@@ -27,6 +27,7 @@ class Window(Frame):
         
         self.init_window()
         self.mainTextFont = ('times',40,'bold')
+        self.secondaryTextFont = ('times',10,'bold')
 
         self.kanjiText = StringVar()
         self.kanjiTextLabel = Label(self,textvariable = self.kanjiText)
@@ -40,6 +41,10 @@ class Window(Frame):
         self.kanaTextLabel = Label(self,textvariable = self.kanaText)
         self.kanaTextLabel.config(font = self.mainTextFont)
         
+        self.progressText = StringVar()
+        self.progressTextLabel = Label(self,textvariable = self.progressText)
+        self.progressTextLabel.config(font = self.secondaryTextFont)
+
         self.presentQuizz()
 
     def init_window(self):
@@ -86,6 +91,12 @@ class Window(Frame):
     def showKana(self):
         self.kanaText.set(self.randoWord.getKana())
         self.kanaTextLabel.place(relx=0.5, rely = 0.5, anchor = N)
+
+    def showProgress(self):
+        self.progressText.set("SHIT")
+        self.progressTextLabel.place(relx=1.0, rely = 1.0, anchor = SE)
+
+
         
     def hideKanji():
         self.kanjiText.set(self.randoWord.getKanji())
@@ -115,6 +126,7 @@ class Window(Frame):
         self.showEnglish()
         self.kanjiTextLabel.place_forget()
         self.kanaTextLabel.place_forget()
+        self.showProgress()
 
         
     def check(self, event = None):
@@ -175,6 +187,8 @@ Root.mainloop()
 #todo:
 #•add progress bar (remaining_quizzes / starting_quizzes)
 #•check that any passed word decrements the counter for all kanji
+#•create option to import a dummy to start from a save point
+#•refactor kanjiTankDict as a dedicated structure
 
 #https://stackoverflow.com/questions/1918005/making-python-tkinter-label-widget-update
 #check this out for changing binds:  https://stackoverflow.com/questions/6433369/deleting-and-changing-a-tkinter-event-binding
