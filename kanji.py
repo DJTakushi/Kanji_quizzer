@@ -93,7 +93,8 @@ class Window(Frame):
         self.kanaTextLabel.place(relx=0.5, rely = 0.5, anchor = N)
 
     def showProgress(self):
-        self.progressText.set("SHIT")
+        #self.progressText.set(KanjiTankDict[self.randoKanji].kanjiCount)
+        self.progressText.set(kanjiData.kanjiCount)
         self.progressTextLabel.place(relx=1.0, rely = 1.0, anchor = SE)
 
 
