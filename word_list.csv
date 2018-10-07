@@ -232,12 +232,12 @@ to output,出る,でる
 letter,手紙,てがみ
 hand,手,て
 postcard,葉書,はがき
-to use,使う,つかう
+to use(noun),使う,つかう
 use,使い,つかい
 book,本,ほん
 to return (transitive),返す,かえす
 reply,返事,へんじ
-to save (money),貯める,ためる
+to save (money),貯める,ためるc
 to make,作る,つくる
 composition,作文,さくぶん
 sentence,文,ふみ
@@ -386,7 +386,7 @@ researcher,研究者,けんきゅうしゃ
 research lab,研究室,けんきゅうしつ
 English,英語,えいご
 Japanese,日本語,にほんご
-Chinese,中国語,ちゅうごくご
+Chinese(language),中国語,ちゅうごくご
 Korea,韓国,かんこく
 Korean,韓国語,かんこくご
 to answer,答える,こたえる

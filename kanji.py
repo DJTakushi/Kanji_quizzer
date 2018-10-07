@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import csv
-import random
+import sys
 from kanji_classes import word
 from kanji_classes import kanjiData
+from kanji_classes import quizz
 
 try:
     # for Python2
@@ -45,10 +45,13 @@ class Window(Frame):
         self.progressTextLabel = Label(self,textvariable = self.progressText)
         self.progressTextLabel.config(font = self.secondaryTextFont)
 
+        self.goodButton = Button(self, text = "Good(g)", command = self.passQuizz)
+        self.failButton = Button(self, text = "Fail(f)", command = self.failQuizz)
+        self.checkButton = Button(self, text = "check(space)", command = self.check)
         self.presentQuizz()
 
     def init_window(self):
-        self.master.title("GUI") #chagnes title
+        self.master.title("GUI") #changes title
         self.pack(fill=BOTH,expand = 1)#uses full space of root window
         menu = Menu(self.master)
         self.master.config(menu = menu)
@@ -59,25 +62,11 @@ class Window(Frame):
         edit.add_command(label="Undo")
         menu.add_cascade(label="Edit", menu=edit)
         
-        quitButton = Button(self, text="Quit", command = self.client_exit)
+        quitButton = Button(self, text="Quit(esc)", command = self.client_exit)
         quitButton.place(x=0,y=0)
         
-        passButton = Button(self, text = "passButton", command = self.passQuizz)
-        passButton.place(relx= 0.75, rely = 0.65, anchor = N)
-        passButton.place_forget()
-        
-        failButton = Button(self, text = "failButton", command = self.failQuizz)
-        failButton.place(relx= 0.25, rely = 0.65, anchor = N)
-        failButton.place_forget()
-
-        quizzButton = Button(self, text = "quizzButton", command = self.presentQuizz)
-        quizzButton.place(relx= 0.25, rely = 0.75, anchor = N)
-
-        checkButton = Button(self, text = "checkButton", command = self.check)
-        checkButton.place(relx= 0.75, rely = 0.75, anchor = N)
-
     def client_exit(self, event=None):
-        outputTankList(KanjiTankDict) 
+        quizzer.outputFile('dummy.csv')
         exit()
         
     def showEnglish(self):
@@ -93,11 +82,13 @@ class Window(Frame):
         self.kanaTextLabel.place(relx=0.5, rely = 0.5, anchor = N)
 
     def showProgress(self):
-        #self.progressText.set(KanjiTankDict[self.randoKanji].kanjiCount)
-        self.progressText.set(kanjiData.kanjiCount)
+        stats = "Remaining Kanji:  " + str(quizzer.getNumberKanjiWithQuizzesRemining()) 
+        stats += "/" + str(quizzer.getNumberOriginalKanji()) + "\n"
+        stats += "Remaining Quizzes:  " + str(quizzer.getNumberQuizzesRemaining()) 
+        stats += "/" + str(quizzer.getNumberOriginalQuizzes())
+        
+        self.progressText.set(stats)  #todo expand to more stats
         self.progressTextLabel.place(relx=1.0, rely = 1.0, anchor = SE)
-
-
         
     def hideKanji():
         self.kanjiText.set(self.randoWord.getKanji())
@@ -108,88 +99,49 @@ class Window(Frame):
         self.kanaTextLabel.place(relx=0.5, rely = 0.5, anchor = N)
         
     def passQuizz(self, event = None): 
-        #self.showText("passQuizz()")
-        for character in self.randoWord.getKanji():
-            if character in KanjiTankDict:
-                #outputDict[character].addWord(thisWord)
-                KanjiTankDict[character].decrementRemainingCount()
+        quizzer.decrementWord(self.randoWord)
         self.presentQuizz()
     
     def failQuizz(self, event = None):
-        #self.showText("failQuizz()")
         self.presentQuizz()
 
     def presentQuizz(self, event = None):
-        self.randoKanji = random.choice(list(KanjiTankDict))
-        while (not KanjiTankDict[self.randoKanji].getWordList()) and (KanjiTankDict[self.randoKanji].getRemainingCount()>0):
-            self.randoKanji = random.choice(list(KanjiTankDict))
-        self.randoWord = random.choice(KanjiTankDict[self.randoKanji].getWordList())
+        self.randoKanji = quizzer.getRandomKanji()
+        self.randoWord = quizzer.getRandomWord(self.randoKanji)
         self.showEnglish()
         self.kanjiTextLabel.place_forget()
         self.kanaTextLabel.place_forget()
         self.showProgress()
+        self.goodButton.place_forget()
+        self.failButton.place_forget()
+        self.checkButton.place(relx= 0.5, rely = 0.75, anchor = N)
 
-        
     def check(self, event = None):
         self.showKanji()
         self.showKana()
-
-def generateTankList():
-    outputDict = {}
-    #import Kanji
-    with open('kanji_list.csv', newline='', encoding='utf-8') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            outputDict[row['kanji']]= kanjiData()
-            outputDict[row['kanji']].setRemainingCount(1)
-
-    #import words
-    with open('word_list.csv', newline='', encoding='utf-8') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            thisWord = word(row['english'],row['kanji'],row['kana'])
-            #englishword=thisWord.getEnglish()
-            #print(thisWord.getEnglish())
-            for character in thisWord.getKanji():
-                if character in outputDict:
-                    #adds this word to the dictionary's entry for the kanji
-                    outputDict[character].addWord(thisWord)
-    return outputDict
-    
-def outputTankList(inputDict):
-    f = open("dummy.csv","w+")
-    with open('dummy.csv', 'w', newline='', encoding='utf-8') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-        #spamwriter.writerow(['Spam'] *5 + ['Baked Beans'])
-        #spamwriter.writerow(['Spam', 'Lovely Spam', 'Wonderful Spam'])
-        datList = ()
-        for key in inputDict:
-            if 1:#not inputDict[key].getWordList(): 
-                datList = ([key] + [inputDict[key].remainingCount])
-                for item in inputDict[key].getWordList():
-                    #print(item)
-                    datList.append(item.getKanji())
-                #spamwriter.writerow([key] + [inputDict[key].remainingCount] + [inputDict[key].getWordList()])
-                spamwriter.writerow(datList)
-    f.close()
+        self.goodButton.place(relx= 0.75, rely = 0.75, anchor = N)
+        self.failButton.place(relx= 0.25, rely = 0.75, anchor = N)
+        self.checkButton.place_forget()
 
 
-KanjiTankDict = generateTankList()
-outputTankList(KanjiTankDict) 
-
-
-
+importFileName = 'kanji_list.csv'
+if len(sys.argv) > 1:
+    importFileName = sys.argv[1]
+print(importFileName)
+quizzer = quizz(importFileName)
 
 Root = Tk()
-Root.geometry("400x300")
+Root.geometry("600x300")
 app = Window(Root)
 Root.mainloop()
 
 #todo:
 #•add progress bar (remaining_quizzes / starting_quizzes)
-#•check that any passed word decrements the counter for all kanji
-#•create option to import a dummy to start from a save point
-#•refactor kanjiTankDict as a dedicated structure
+#•add picture support for words and all the freaking pictures
+#•add hint support for words
+#•add side display/log (after designing)
+#•doxygen!
+#•unbind keys to prevent mistaken verdicts
 
 #https://stackoverflow.com/questions/1918005/making-python-tkinter-label-widget-update
 #check this out for changing binds:  https://stackoverflow.com/questions/6433369/deleting-and-changing-a-tkinter-event-binding
