@@ -16,12 +16,13 @@ class Window(Frame):
     def __init__(self, master = None):
         Frame.__init__(self,master)
         self.master = master
-        master.bind('1', self.presentQuizz)
-        master.bind('<space>', self.check)
+        #master.bind('1', self.presentQuizz)
+        #master.bind('<space>', self.check)
         master.bind('<Escape>', self.client_exit)
-        master.bind('g', self.passQuizz)
-        master.bind('f', self.failQuizz)
+        #master.bind('g', self.passQuizz)
+        #master.bind('f', self.failQuizz)
         
+        self.quizzCount = 0
         self.randoKanji = ''
         self.randoWord = word('','','')
         
@@ -85,7 +86,8 @@ class Window(Frame):
         stats = "Remaining Kanji:  " + str(quizzer.getNumberKanjiWithQuizzesRemining()) 
         stats += "/" + str(quizzer.getNumberOriginalKanji()) + "\n"
         stats += "Remaining Quizzes:  " + str(quizzer.getNumberQuizzesRemaining()) 
-        stats += "/" + str(quizzer.getNumberOriginalQuizzes())
+        stats += "/" + str(quizzer.getNumberOriginalQuizzes()) + "\n"
+        stats += "Attempted Quizzes:  " + str(self.quizzCount)
         
         self.progressText.set(stats)  #todo expand to more stats
         self.progressTextLabel.place(relx=1.0, rely = 1.0, anchor = SE)
@@ -115,6 +117,9 @@ class Window(Frame):
         self.goodButton.place_forget()
         self.failButton.place_forget()
         self.checkButton.place(relx= 0.5, rely = 0.75, anchor = N)
+        self.master.bind('<space>', self.check)
+        self.master.unbind('g')
+        self.master.unbind('f')
 
     def check(self, event = None):
         self.showKanji()
@@ -122,7 +127,10 @@ class Window(Frame):
         self.goodButton.place(relx= 0.75, rely = 0.75, anchor = N)
         self.failButton.place(relx= 0.25, rely = 0.75, anchor = N)
         self.checkButton.place_forget()
-
+        self.master.unbind('<space>')
+        self.master.bind('g', self.passQuizz)
+        self.master.bind('f', self.failQuizz)
+        self.quizzCount += 1
 
 importFileName = 'kanji_list.csv'
 if len(sys.argv) > 1:
@@ -132,6 +140,7 @@ quizzer = quizz(importFileName)
 
 Root = Tk()
 Root.geometry("600x300")
+#Root.geometry('40x20')
 app = Window(Root)
 Root.mainloop()
 
@@ -141,7 +150,6 @@ Root.mainloop()
 #•add hint support for words
 #•add side display/log (after designing)
 #•doxygen!
-#•unbind keys to prevent mistaken verdicts
 
 #https://stackoverflow.com/questions/1918005/making-python-tkinter-label-widget-update
 #check this out for changing binds:  https://stackoverflow.com/questions/6433369/deleting-and-changing-a-tkinter-event-binding
