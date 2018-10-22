@@ -150,6 +150,7 @@ Root.mainloop()
 #•add hint support for words
 #•add side display/log (after designing)
 #•doxygen!
+#•reverse-quiz (kanji -> kana)
 
 #https://stackoverflow.com/questions/1918005/making-python-tkinter-label-widget-update
 #check this out for changing binds:  https://stackoverflow.com/questions/6433369/deleting-and-changing-a-tkinter-event-binding
