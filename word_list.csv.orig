@@ -1,0 +1,801 @@
+english,kanji,kana
+big,大きい,おおきい
+small,小さい,ちいさい
+student,学生,がくせい
+I,私,わたし
+university,大学,だいがく
+university student,大学生,だいがくせい
+school-department,学部,がくぶ
+Sunday,日曜日,にちようび
+sun-exposure,日当たり,ひあたり
+daily allowance,日当,にっとう
+daily allowance,日当,にっとう
+one-person,一人,ひとり
+foreigner,外国人,がいこくじん
+China (middle country),中国,ちゅか
+this-year,今年,ことし
+next-year,来年,らいねん
+long,長い,ながい
+to go out,出かける,でかける
+wristwatch,腕時計,うでどけい
+Monday,月曜日,げつようび
+before,前,まえ
+after,後,あと
+time,時間,じかん
+to see,見る,みる
+to show,見せる,みせる
+soil,土,つじ
+construction-worker/laborer,土方,どかた
+eastern-part,東部,とうぶ
+squareish,四角い,しかくい
+metal,金属,きんぞく
+money,お金,おかね
+Friday,金曜日,きんようび
+Tuesday,火曜日,かようび
+Wednesday,水曜日,すいようび
+Thursday,木曜日,もくようび
+Saturday,土曜日,どようび
+What-day-of-the-week,何曜日,なんようび
+What-time,何時,なんじ
+one,一,いち
+two,二,に
+three,三,さん
+four,四,よん
+five,五,ご
+six,六,ろく
+seven,七,なな
+eight,八,はち
+nine,九,きゅう
+ten,十,
+to enter,入る,
+entry-to-school,入学,にゅうがく
+to insert,入れる,
+tall,高い,たかい
+to rise/swell-up,高まる,たかまる
+well/healthy,元気,
+outside,外,
+teaspoon,小匙,こおさじ
+tablespoon,大匙,おおさじ
+underground-place,地下,
+under,下,
+next-month,来月,
+yen,円,
+child (long),子供,
+child (short),子,
+to talk,話す,はなす
+telephone,電話,
+woman,女の人,
+girl,女の子,
+man,男の人,
+boy,男の子,
+north,北,
+south,南,
+east,東,
+west,西,
+north-east,北東,
+south-east,南東,
+south-west,南西,
+north-west,北西
+one-hundred,百
+AM,午前
+PM,午後
+to write,書く,かく
+library,図書館,としょかん
+full-name,名前
+name,名前
+school,学校
+mountain,山
+river,川
+one thousand,千
+water,水
+half~,半
+half-part,半分
+half-year,半年
+half-a-lifetime,半生,はんせい
+to listen,聞く
+to eat,食べる
+car,車
+train,電車,でんしゃ
+what,何
+ten-thousand,万
+sea,海
+overseas,海外
+every day,毎日
+every month,毎月
+every year,毎年
+weather,天気
+tempura,天ぷら
+mom,母
+mother,お母さん
+dad,父
+father,お父さん
+fire (short),火
+fire (long),火事
+big fire,大火事
+right,右
+left,左
+left side,左側
+right side,右側
+to read,読む
+friend,友達
+Tomoda,友田
+to rest/relax,休む
+day-off,休み
+rain,雨,あめ
+light-rain,小雨
+black rain,黒い雨
+meeting,会議,かいぎ
+sending-off-party,送別会,そうべつかい
+association/socializing,付き合い
+thing (intangible),事
+same,同じ,おなじ
+coworker,同僚,どうりょう
+accident,事故,じこ
+ethnic group,民族,みんぞく
+people/citizens,民,たみ
+to take the place of/substitute,代わる
+to save (transitive),助ける
+to save (intransitive),助かる
+rise (of a movement)/rearing-one's-head,台頭
+unorganized,片付けない
+test,試験
+blue,青い
+place/location,場所
+place(simple!),所,ところ
+to sell,売る,うる
+point of sales,売り場
+to measure,計る,はかる
+to measure(map),図る,はかる
+to hold,持つ
+to wait,待つ
+tea,お茶
+classical cafe,喫茶店
+to begin (intransitive),始まる
+to begin (transitive),始める
+to give birth/bear(a child),産む,うむ
+to grow (of moss etc),産す／生す,むす
+last year,去年,きょねん
+to leave/go-away or be distant,去る,さる
+to reside,住む,すむ
+living place,住む所,すむところ
+to wear/put on,着る,きる
+to arrive,着く,つく
+thing (tangible),物,もの
+food-thing,食べ物,たべもの
+drink-thing,飲み物,のみもの
+ornament,置物,おきもの
+present,贈り物,おくりもの
+little brother,弟,おとうと
+to send,送る,おくる
+heavy,重い,おもい
+weight/sinker,重り,おもり
+medicine,薬,くすり
+ring finger,薬指,くすりゆぶ
+finger,指,ゆび
+to become fat,太る,ふとる
+thicc,太い,ふとい
+explanation,説明,せつめい
+novel,小説,しょうせつ
+little-sister,妹,いもうと
+younger syblings,弟妹,ていまい
+western-sytle clothing,洋服,ようふく
+woods,林,はやし
+light (vehicle/aircraft),軽,けい
+lightweight,軽い,かるい
+to return home,帰る,かえる
+to send back home (transitive),帰す,かえす
+regression/return-to/revolution/recurrence,回帰,かいき
+pond,池,いけ
+Tokyo,東京,とうきょう
+Kyoto,京都,きょうと
+prefecture,県,けん
+Aomori Prefecture,青森県,あおもりけん
+vegetable,野菜,やさい
+baseball,野球,やきゅう
+Nakamoto,中本,なかもと
+Iemoto,家本,いえもと
+Bookstore,本屋,ほんや
+Butcher-store,肉屋,にくや
+Fish-store,魚屋,さかなや
+carefree,気楽,きらく
+graffiti,落書き,らくがき
+promotion,昇進,しょうしん
+marriage,結婚,けっこん
+handy/skilled,上手,じょうず
+cooking,料理,りょうり
+flash of lightening,稲光,いなびかり
+art museum,美術館,びじゅつかん
+museum,博物館,はくぶつかん
+amusement park,遊園地,ゆうえんち
+park,公園,こうえん
+women's clothes,婦人服,ふじんふく
+woman (lady-person),婦人,ふじん
+weather-report,天気予報,てんきよほう
+dusk,夕方,ゆうがた
+this month,今月,こんげつ
+to be late,遅れる,おくれる
+various,色々,いろいろ
+to know,知る,しる
+plan,予定,よてい
+tourist,観光客,かんこうきゃく
+electricity,電気,でんき
+to finish (intransitive),終わる,おわる
+to finish (transitive),終える,おえる
+far,遠い,とおい
+side/direction,方,ほう
+meeting place,会場,かいじょう
+to change (intransitive),変わる,かわる
+to change (transitive),変える,かえる
+post office,郵便局,ゆうびんきょく
+to submit,出す,だす
+to output,出る,でる
+letter,手紙,てがみ
+hand,手,て
+postcard,葉書,はがき
+to use(noun),使う,つかう
+use,使い,つかい
+book,本,ほん
+to return (transitive),返す,かえす
+reply,返事,へんじ
+to save (money),貯める,ためるc
+to make,作る,つくる
+composition,作文,さくぶん
+sentence,文,ふみ
+to withdraw (money),引き出す,ひきだす
+to pull,引く,ひく
+beyond,先,さき
+embassy,大使館,たいしかん
+street,道,みち
+road,道路,どうろ
+to go,行く,いく
+bank,銀行,ぎんこう
+airplane,飛行機,ひこうき
+to fly,飛ぶ,とぶ
+reserved seat,指定席,していせき
+doll,人形,にんぎょう
+to give (supperior->in),下さる,くださる
+senpai,先輩,せんぱい
+useful,役に立つ,やくにたつ
+height,高さ,たかさ
+grandma,祖母,そぼ
+grandmother,お祖母さん,おばあさん
+grandpa,祖父,そふ
+grandfather,お祖父さん,おじいさん
+tomorrow,明日,あした
+the day after tomorrow,明後日,あさって
+yesterday,昨日,きのう
+the day before yesterday,一昨日
+the year before last year,一昨年
+to say,言う,いう
+Emi,絵美,えみ
+picture,絵,え
+Tanaka,田中,たなか
+to ask,聞く,きく
+to add (an ingredient),加える,くわえる
+miso,味噌,みそ
+ingredient,材料,ざいりょう
+taste,味,あじ
+heavy rain,大雨,おおあめ
+murder,殺人,さつじん
+to kill,殺す,ころす
+bad-mouth,悪口,わるくち
+mouth,口,くち
+bad,悪い,わるい
+kitten,子猫,こねこ
+puppy,子犬,こいぬ
+sensei,先生,せんせい
+Japan,日本,にほん
+inconvenient,不便,ふべん
+to go meet someone,迎えに行く,むかえにいく
+religion,宗教,しゅうきょう
+other people,他のひと,ほかのひと
+calligraphy,習字,しゅうじ
+interest,興味,きょうみ
+assistance,お世話,おせわ
+world,世界,せかい
+polite,丁寧,ていねい
+express-parcel-delivery-service,宅配便,たくはいびん
+delivery-service(TM),宅急便,たっきゅびん
+shopping,買い物,かいもの
+to sit,座る,すわる
+floor,床,ゆか
+to be acquanited with,知り合う,しりあう
+to take lessons in,習う,ならう
+practice/rehearsal,練習,れんしゅう
+dog,犬,いぬ
+cat,猫,ねこ
+hour,時間,じかん
+dog-walk,散歩,さんぽ
+to walk,歩く,あるく
+to run,走る,はしる
+week,週間,しゅうかん
+room,部屋,へや
+to clean,片付ける,かたづける
+quick,早い,はやい
+house,家,うち
+family,家族,かぞく
+aquarium,水族館,すいぞくかん
+movie,映画,えいが
+cinema,映画館,えいがかん
+younger,年下,としした
+older,年上,としうえ
+to believe,思う,おもう
+to die,死ぬ,しぬ
+to forget,忘れる,わすれる
+interlocutor,相手,あいて
+trouble/bother,迷惑,めいわく
+apology/excuse,申し訳,もうしわけ
+adult,大人,おとな
+to awake/happen(intransitive),起きる,おきる
+to awake/happen(intransitive),起す,起こす
+today,今日,きょう
+document,書類,しょるい
+application,応募,おうぼ
+business-tripp,出張,しゅっちょう
+lodging,宿,やど
+homework,宿題,しゅくだい
+Shinjuku,新宿,しんじゅく
+new,新しい,あたらしい
+newspaper,新聞,しんぶん
+magazine,雑誌,ざっし
+shrine(simple),社,やしろ
+shrine,神社,じんじゃ
+to train/practice,練る,ねる
+conversation,会話,かいわ
+town,町,まち
+next,次,つぎ
+question,質問,しつもん
+to swim,泳ぐ,およぐ
+fish,魚,さかな
+nice/fancy,立派,りっぱ
+to set up(easy-kanji),立てる,たてる
+to set up(hard-kanji),建てる,たてる
+to convey,伝える,つたえる
+complaint,文句,もんく
+most/extremely,最も,もっとも
+these-days,最近,さいきん
+close,近い,ちかい
+neighborhood,近所,きんじょ
+neighbor,近所の人,きんじょのひと
+Takushi,沢岻,たくし
+entry(in a registry),記入,きにゅう
+diary,日記,にっき
+to attach/stick,付ける,つける
+specialty,専門,せんもん
+major (of study),専攻,せんこう
+charge,係,かかり
+connection,関係,かんけい
+to be relvant,関わる,かかわる
+Tokyo metropolitan area,東京都,とうきょうと
+special wards,特別区,とくべつく
+special,特別,とくべつ
+liked,好き,すき
+loved,大好き,だいすき
+silver,銀,ぎん
+to stop(intransitive),留まる,とまる
+to stop(intransitive),留める,とめる
+to stop(transitive)2,止まる,とまる
+to stop(intransitive)2,止める,とめる
+to quit(transitive),止める,やめる
+hospital,病院,びょういん
+to check-in/enter,入院,にゅういん
+noon,昼,ひる
+lunch,昼ご飯,ひるごはん
+doctor,医者,いしゃ
+researcher,研究者,けんきゅうしゃ
+research lab,研究室,けんきゅうしつ
+English,英語,えいご
+Japanese,日本語,にほんご
+Chinese(language),中国語,ちゅうごくご
+Korea,韓国,かんこく
+Korean,韓国語,かんこくご
+to answer,答える,こたえる
+answer,答え,こたえ
+temple/hall,堂,どう
+magnificent,堂々,どうどう
+Nintendo,任天堂,にんてんどう
+meaning,意味,いみ
+warning,注意,ちゅうい
+order/request,注文,ちゅうもん
+to pour,注ぐ,そそぐ
+bright,明るい,あかるい
+Tokyo City,東京市,とうきょうし
+person,方,かた
+sound,音,おと
+music,音楽,おんがく
+to teach,教える,おしえる
+church,教会,きょうかい
+body,体,からだ
+head,頭,あたま
+face,顔,かお
+face-color,顔色,かおいろ
+leg,足,あし
+neck,首,くび
+wrist,手首,てくび
+ankle,足首,あしくび
+back,背中,せなか
+nose,鼻,はな
+eye,目,め
+ear,耳,みみ
+evening,夕,ゆう
+surname,名字,みょうじ
+opportunity,契機,けいき
+number,番号,ばんごう
+photograph,写真,しゃしん
+Yamamoto,山本,やまもと
+dictionary,辞書,じしょ
+western-food,洋食,ようしょく
+to come,来る,くる
+future,将来,しょうらい
+to turn off (intransitive),消える,きえる
+to turn off (transitive),消す,けす
+to take off (clothes),脱ぐ,ぬぐ
+trading company,貿易会社,ぼうえきかいしゃ
+regular,普通,ふつう
+account,口座,こうざ
+to unseal,開く,ひらく
+to open(intransitive),開く,あく
+to open(transitive),開ける,あける
+to close(intransitive),閉まる,しまる
+to close(transitive),閉める,しめる
+painful,痛い,いたい
+to sing,歌う,うたう
+song,歌,うた
+voice,声,こえ
+to arrive(intransitive)2,届く,とどく
+to arrive(transitive)2,届ける,とどける
+to buy,買う,かう
+station,駅,えき
+convenient,便利,べんり
+corner,角,かど
+boss,上司,じょうし
+congratulatory gift,祝い,いわい
+wedding gift,結婚祝い,けっこんいわい
+pork,豚肉,ぶたにく
+wasteful,無駄,むだ
+to throw away,捨てる,すてる
+to sleep,寝る,ねる
+social,社会的,しゃかいてき
+society,社会,しゃかい
+traditional,伝統的,でんとうてき
+politics,政治,せいじ
+political,政治的な,せいじてきな
+economics,経済,けいざい
+economical,経済的,けいざいてき
+research,研究,けんきゅう
+poetry,詩,し
+art,芸術,げいじゅつ
+to give(to a superior),差し上げる,さしあげる
+to receive/get,受ける,うける
+class,授業,じゅぎょう
+graduation,卒業,そつぎょう
+during,間,あいだ
+study-abroad,留学,りゅうがく
+scale,計り,はかり
+night,夜,よる
+evening/night,晩,ばん
+middle-of-the-night,晩中,ばんなか
+president,社長,しゃじょう
+section-chief,課長,かちょう
+to lend,貸す,かす
+to borrow,借りる,かりる
+motive for application,志望動機,しぼうどうき
+desire,志望,しぼう
+motivation,動機,どうき
+correct,正しい,ただしい
+living/life,生活,せいかつ
+activity,活動,かつどう
+honest/frank,正直,しょうじき
+to heal/be-fixed,治る／直る,なおる
+to fix,治す／直す,なおす
+to govern,治める,おさめる
+to place,置く,おく
+white,白い,しろい
+black,黒い,くろい
+employee,会社員,かいしゃいん
+member,員,いん
+6o'clock departure,六時発,ろくじはつ
+departure,発,はつ
+bicycle,自転車,じてんしゃ
+self,自己,じこ
+self-introduction,自己紹介,じこしょうかい
+glasses,目がね,めがね
+husband,主人,しゅじん
+okay,大丈夫,だいじょうぶ
+to use2,用いる,もちいる
+use3,利用,りよう
+reason,理由,りゆう
+salary,給料,きゅうりょう
+one time,一度,いちど
+strong,強い,つよい
+to study,勉強する,べんきょうする
+public,公,おおやけ
+job,仕事,しごと
+company,会社,かいしゃ
+way of doing,使い方,つかいかた
+weak,弱い,よわい
+weak economy,弱い経済,よわいけいざい
+to weaken,弱る,英字よわる
+red,赤い,あかい
+baby,赤ちゃん,あかちゃん
+kanji,漢字,かんじ
+englsih letter,英字,えいじ
+dawn,夜明け,よあけ
+to continue,進む,すすむ
+gate/gate,門,もん
+cold(disease),風邪,かぜ
+wind,風,かぜ
+typhoon,台風,たいふう
+west wind,西風,にしかぜ
+low,低い,ひくい
+decline/degredation,低下,ていか
+to meet/gather(intransitive),集まる,あつまる
+to meet/gather(intransitive),集める,あつめる
+to roll,転がる,ころがる
+to cut,切る,きる
+ticket,切符,きっぷ
+New Year (true moon),正月,しょうがつ
+absence,留守,るす
+number/amount,数,かず
+hungry,饑い,ひだるい
+muscle,筋肉,きんにく
+entering priesthood,出家,しゅっけ
+to wash,洗う,あらう
+laundry,洗濯,せんたく
+fruit,果物,くだもの
+to put on,履く,はくぶつかん
+first of the month,一日,ついたち
+husband(short),夫,おっと
+inside,中,なか
+number-one,一番,いちばん
+winter,冬,ふゆ
+cold,寒い,さむい
+winter season/part,冬場,ふゆば
+snow,雪,ゆき
+storm,嵐,あらし
+from-time-to-time,時々,ときどき
+to move(intransitive),動く,うごく
+to move(transitive),動かす,うごかす
+to ride (intransitive),乗る,のる
+to ride (transitive),乗せる,のせる
+older sis,姉,あね
+older bro,兄,あに
+older sister,お姉さん,お姉さん
+older brother,お兄さん,おにいさん
+sensation,気持ち,きもち
+feeling,気分,きぶん
+to vomit,吐く,はく
+to lower(intrasitive),下がる,さがる
+to lower(transitive),下げる,さげる
+to raise(intransitive),上がる,あがる
+to raise(transitive),上げる,あげる
+to be able to do,出来る,できる
+sightseeing,観光,かんこう
+resume,履歴書,りれきしょ
+to become dirty(intransitive),汚れる,よごれる
+to soil,汚す,よごす
+free,自由,じゆう
+lifestyle,生活,せいかつ
+package,小包,こづつみ
+subway,地下鉄,ちかてつ
+railroad,鉄道,てつどう
+to continue(intransitive),続く,つづく
+to continue(transitive),続ける,つづける
+area,辺,へん
+parking lot,駐車場,ちゅうしゃじょう
+normal train,普通列車,ふつうれっしゃ
+animal,動物,どうぶつ
+to meet,会う,あう
+big fire,大火事,おおかじ
+thunder/lightning-bolt,雷,かみなり
+lonely,心細い,こころぼそい
+heart,心,こころ
+to worry,心配する,しんぱいする
+travel,旅行,りょこう
+ryokan,旅館,りょかん
+gym,体育館,としょかん
+public hall,公民館,こうみんかん
+municipal office,市役所,市役所
+story,話,はなし
+to understand,分かる,わかる
+never,全然,ぜんぜん
+seriously,全く,まったく
+all,全部,ぜんぶ
+inadequacy,力不足,ちからぶそく
+safe,安全,あんぜん
+cheap,安い,やすい
+moving,引っ越す,ひっこす
+to move(relocation),引っ越し,ひっこし
+briefing session,説明会,せつめいかい
+information,情報,じょうほう
+advertisement,広告,こうこく
+spacious,広い,ひろい
+to confer,授ける,さずける
+rude,失礼,しつれい
+side,横,よこ
+crosswalk,横断ほどいう,おうだんほどう
+to remember,覚える,おぼえる
+to wake/become-sober,覚める,さめる
+to merge/unite/come-together,会う,あう
+to turn towards,向く,むく
+opposite side,向かい側,むかいがわ
+by-means-of,以て,もって
+many/frequent/much,多い,おおい
+most numerous,最多,さいた
+to contemplate,考える,かんがえる
+foodstuff,食品,しょくひん
+~thingy-madoogle,～品,～しな
+exercise,運動,うんどう
+to be (inanimate),有る,ある
+famous,有名,ゆうめい
+thank you,有り難う,ありがとう
+difficult,難しい,むずかしい
+few,少し,すこし
+little by little,少しずつ,すこしずつ
+factory worker,工員,こういん
+sky,空,そら
+airport,空港,くうこう
+parents,両親,りょしん
+nice,親切,しんせつ
+old,古い,ふるい
+Furuta-san,古田さん,ふるたさん
+flower,花,はな
+flower-arrangement,生け花,いけばな
+spring,春,はる
+fall,秋,あき
+summer,夏,なつ
+bird,鳥,とり
+bird-meat,鳥肉,とりにく
+to take,取る,とる
+to help(transitive),助ける,たすける
+to help(intransitive),助かる,たすかる
+cow,牛,うし
+milk,牛乳,ぎゅにゅう
+beef,牛肉,ぎゅうにく
+morning,朝,あさ
+breakfast,朝ご飯,あさごはん
+every morning,毎朝,まいあさ
+useless,下らない,くだらない
+Japanese person,日本人,にほんじん
+air temperature,気温,きおん
+highest temperature,最高気温,さいこうきおん
+good luck,吉,きち
+Ogawa-san,小川さん,おがわさん
+Kawanaka-san,川中さん,かわなかさん
+quiet,静か,しずか
+to clear(weather),晴れる,はれる
+clear weather,晴れ,はれ
+to cross,渡る,わたる
+fever,熱,ねつ
+souvenir,お土産,おみやげ
+to leave-out,残す,のこす
+to be left-out,残る,のこる
+window,窓,まど
+to chill(transitive),冷やす,ひやす
+to chill(intransitive),冷える,ひえる
+to beckon,呼ぶ,よぶ
+to apply for,申し込む,もうしこむ
+thank-you gift,お礼,おれい
+congratulatory gift,お祝い,おいわい
+Hashimoto-san,橋本,はしもと
+to heat up,温める,あたためる
+to burn,焼ける,やける
+to bake,焼く,やく
+earthquake,地震,じしん
+boyfriend,彼氏,かれし
+girlfriend,彼女,かのじょ
+invitation,招待,しょうたい
+floor,床,ゆか
+to welcome,迎える,むかえる
+to keep company with,付き合う,つきあう
+I(masculine),僕,ぼく
+education,教育,きょういく
+to be raised(a child),育つ,そだつ
+to raise(a child),育てる,そだてる
+meeting,迎え,むかえ 
+to cry,泣く,なく
+to forgive,許す,ゆるす
+being in touch,連絡,れんらく
+result/outcome,結果,けっか
+reply,返事,へんじ
+written-test,筆記試験,ひっきしけん
+document,書類,しょるい
+oral exam,面接試験,めんせつしけん
+appointment,予約,よやく
+driver's liscense,運転免許証,うんてんめんきょしょう
+unresonable,無理,むり
+to fall,落ちる,おちる
+to drop,落とす,おとす
+to be in trouble,困る,こまる
+luggage,荷物,にもつ
+to take the form of,化ける,ばける
+to rush/hurry,注ぐ,そそぐ
+consulatation,相談,そうだん
+interview,面接,めんせつ
+Hokkaido,北海道,ほっかいどう
+important,大切,たいせつ
+appropriate,適当,てきとう
+to add(numbers),足す,たす
+traffic accident,交通事故,とうつうじこ
+traffic,交通,こうつう
+bow,お辞儀,おじぎ
+custom/habbit,習慣,しゅうかん
+bummer,残念,ざんねん
+deadline,締め切り,しめきり
+recipe/construction,作り方,つくりかた
+tidings/news,便り,たより
+grammar,文法,ぶんぽう
+stone,石,いし
+busy,忙しい,いそがしい
+to check,調べる,しらべる
+looking for a job,就職,しゅうしょく
+flood,洪水,こうずい
+education(2),教養,きょうよう
+to notify,知らせる,しらせる
+vocabular,単語,たんご
+mailbox,郵便受け,ゆびんうけ
+application form,申込用紙,もうしこみようし
+soap,石鹸,せっけん
+to cook,炊く,たく
+experience,経験,けいけん
+midnight/late-at-night,夜中,よなか
+job-hunting,就職活動,しゅうしょくかつどう
+procedure,手続き,てつづく
+to live/exist,生きる,いきる
+to miss/make a mistake(transitive),間違える,まちがえる
+to miss/make a mistake(intransitive),間違う,まちがう
+to be decided (intransitive),決まる,きまる
+to decide(transitive),決める,きめる
+ticket stand,切符売り場,きっぷうりば
+address/residence,住所,じゅしょ
+to work,働く,はたらく
+Farenheight,華氏,かし
+humidity,湿度,しつど
+memory,思い出,おもいで
+to be born (intransitive),生まれる,うまれる
+alien registry card,外国人登録証,がいこくじんとうろくしょう
+council general,領事館,りょうじかん
+confectionary,お菓子,おかし
+souveneir,お土産,おみやげ
+kitchen knife,包丁,ほうちょう
+last/finally,最後（に）,さいご（に）
+to break up,別れる,わかれる
+seiza,正座,せいざ
+ending,終わり,おわり
+every-stop-train,各駅停車,かくえきていしゃ
+superiority/excellence,優秀,ゆうしゅう
+impression,印象,いんしょう
+organization/association,団体,だんたい
+public opinion poll,世論調査,よろんちょうさ
+publication/announcement/statement,発表,はっぴょう
+investigation/examination,調査,ちょうさ
+public opinion,世論,よろん
+interesting,お面白い,おもしろい
+<<<<<<< HEAD
+to be audible,聞こえる,きこえる
+rubella/German-measles,風疹,ふうしん
+not-less-than/upwards,以上,いじょう
+Osaka prefecture,大阪府,おおさかふ
+private residence temporarily taking lodgers,民泊,みんぱく
+Akita (dog breed),秋田犬,あきたいぬ
+crowd of people,大勢,おおぜい
+flour,小麦粉,こむぎく
+landlord,大家,おおや
+export,輸出,ゆしゅつ
+law,法律,ほうりつ
+hemp,大麻,たいま
+word/language,言葉,ことば
+=======
+ball/sphere,玉,たま
+light,光,ひかり
+to be caught/arrested,捕まる,つかまる
+video,動画,どうが
+beautiful legs,美脚,びきゃく
+beautiful/lovely,美しい,うつくしい
+to increase,増える,ふえる
+Akasaka,赤坂,あかさか
+private lodging,民泊,みんぱく
+mistake,間違い,まちがい
+joke,冗談,じょうだん
+
+>>>>>>> 4f9418ac2b1b6176e05ec2f99a31bb5c16bbfc19
