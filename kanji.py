@@ -102,9 +102,11 @@ class Window(Frame):
         
     def passQuizz(self, event = None): 
         quizzer.decrementWord(self.randoWord)
+        quizzer.logPass(self.randoKanji,self.randoWord.getKanji())
         self.presentQuizz()
     
     def failQuizz(self, event = None):
+        quizzer.logFail(self.randoKanji,self.randoWord.getKanji())
         self.presentQuizz()
 
     def presentQuizz(self, event = None):

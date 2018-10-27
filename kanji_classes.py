@@ -51,10 +51,12 @@ class quizz:
     def __init__(self,kanjiFile):
         self.kanjiDict = generateTankList(kanjiFile)
         self.Quizzes = self.getNumberQuizzesRemaining()
+        self.log = []
 
     #print out evaluation as file
     def outputFile(self, fileName):
         outputTankList(self.kanjiDict, fileName)
+        outputLog(self.log, "log")
 
     #return random kanji from dictionary to quizz
     def getRandomKanji(self):
@@ -117,6 +119,15 @@ class quizz:
     #return number of original quizzes
     def getNumberOriginalQuizzes(self):
         return self.Quizzes
+
+    #log results
+    def logPass(self,kanji,word):
+        self.log.append(("PASS",kanji,word,self.getNumberKanjiWithQuizzesRemining(),self.getNumberQuizzesRemaining()))
+
+    def logFail(self,kanji,word):
+        self.log.append(("FAIL",kanji,word,self.getNumberKanjiWithQuizzesRemining(),self.getNumberQuizzesRemaining()))
+
+
 #data
  #dictionary
   #key = kanji character
@@ -146,7 +157,7 @@ def generateTankList(inputFile):
                     #adds this word to the dictionary's entry for the kanji
                     outputDict[character].addWord(thisWord)
     return outputDict
-    
+
 def outputTankList(inputDict, fileName):
     f = open(fileName,"w+")
     with open(fileName, 'w', newline='', encoding='utf-8') as csvfile:
@@ -162,4 +173,15 @@ def outputTankList(inputDict, fileName):
                     datList.append(item.getKanji())
                 #spamwriter.writerow([key] + [inputDict[key].remainingCount] + [inputDict[key].getWordList()])
                 spamwriter.writerow(datList)
+    f.close()
+
+def outputLog(logList, fileName):
+    f = open(fileName,"w+")
+    with open(fileName, 'w', newline='', encoding='utf-8') as csvfile:
+        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        datList = ("kanji","word","result")
+        spamwriter.writerow(datList)        
+        for log in logList:
+            spamwriter.writerow(log)
+            #spamwriter.writerow(datList)
     f.close()
