@@ -123,7 +123,7 @@ to rest/relax,休む
 day-off,休み
 rain,雨,あめ
 light-rain,小雨
-black rain,黒い雨
+black rain,黒い雨,くろいあめ
 meeting,会議,かいぎ
 sending-off-party,送別会,そうべつかい
 association/socializing,付き合い
@@ -233,8 +233,8 @@ to output,出る,でる
 letter,手紙,てがみ
 hand,手,て
 postcard,葉書,はがき
-to use(noun),使う,つかう
-use,使い,つかい
+to use,使う,つかう
+use(noun),使い,つかい
 book,本,ほん
 to return (transitive),返す,かえす
 reply,返事,へんじ
@@ -320,7 +320,7 @@ movie,映画,えいが
 cinema,映画館,えいがかん
 younger,年下,としした
 older,年上,としうえ
-to believe,思う,おもう
+to believe/think,思う,おもう
 to die,死ぬ,しぬ
 to forget,忘れる,わすれる
 interlocutor,相手,あいて
@@ -328,7 +328,7 @@ trouble/bother,迷惑,めいわく
 apology/excuse,申し訳,もうしわけ
 adult,大人,おとな
 to awake/happen(intransitive),起きる,おきる
-to awake/happen(intransitive),起す,起こす
+to awake/happen(transitive),起す,起こす
 today,今日,きょう
 document,書類,しょるい
 application,応募,おうぼ
@@ -355,7 +355,7 @@ to convey,伝える,つたえる
 complaint,文句,もんく
 most/extremely,最も,もっとも
 these-days,最近,さいきん
-close,近い,ちかい
+close/nearby,近い,ちかい
 neighborhood,近所,きんじょ
 neighbor,近所の人,きんじょのひと
 Takushi,沢岻,たくし
@@ -494,14 +494,14 @@ to place,置く,おく
 white,白い,しろい
 black,黒い,くろい
 employee,会社員,かいしゃいん
-member,員,いん
+~member,～員,～いん
 6o'clock departure,六時発,ろくじはつ
 departure,発,はつ
 bicycle,自転車,じてんしゃ
 self,自己,じこ
 self-introduction,自己紹介,じこしょうかい
 glasses,目がね,めがね
-husband,主人,しゅじん
+husband(lord+person),主人,しゅじん
 okay,大丈夫,だいじょうぶ
 to use2,用いる,もちいる
 use3,利用,りよう
@@ -625,7 +625,7 @@ many/frequent/much,多い,おおい
 most numerous,最多,さいた
 to contemplate,考える,かんがえる
 foodstuff,食品,しょくひん
-~thingy-madoogle,～品,～しな
+~stock,～品,～しな
 exercise,運動,うんどう
 to be (inanimate),有る,ある
 famous,有名,ゆうめい
@@ -802,7 +802,7 @@ navy(color),紺色,こんいろ
 Haneda,羽田,はねだ
 Case/situation,場合,ばあい
 Electric fan,扇風機,せんぷうき
-To be photographed,写る,うつる
+To be photographed,うつる,うつる
 discovery,発見,はっけん
 taking refuge,避難,ひなん
 introduction,紹介,しょうかい
@@ -829,14 +829,11 @@ Pacific Ocean side,太平洋側,たいへいようがわ
 intersection,交差点,こうさてん
 straight,真っ直ぐ,まっすぐ
 conversation/speaking,発音,はつおん
-<<<<<<< HEAD
 sufficient,結構,けっこう
 reception-desk,受付,うけつけ
-=======
 Yamanote line,山手線,やまのてせん
 just before,手前,てまえ
 one's junior,後輩,こうはい
 all/everything,皆,みんな
 scary,怖い,こわい
 scandal/event,事件,じけん
->>>>>>> dde187d6b8fab2eeecf86004d5c27a4b5a0c43e6
