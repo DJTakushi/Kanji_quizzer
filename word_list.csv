@@ -99,7 +99,7 @@ train,電車,でんしゃ
 what,何
 ten-thousand,万
 sea,海
-overseas,海外
+overseas,海外,かいがい
 every day,毎日
 every month,毎月
 every year,毎年
@@ -840,3 +840,6 @@ scandal/event,事件,じけん
 to assist,手伝う,てつだう
 subordinate,部下,ぶか
 new years card,年賀状,ねんがじょう
+residence/dwelling,家,いえ
+speed,時速,じそく
+suicide,自殺,じさつ
