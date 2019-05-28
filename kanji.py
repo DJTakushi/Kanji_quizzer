@@ -1,3 +1,7 @@
+## @package kanji
+#Documentation for this module.
+#More details.
+
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
@@ -12,7 +16,9 @@ except ImportError:
     # for Python3
     from tkinter import *   ## notice lowercase 't' in tkinter here
 
+## Window class documentation
 class Window(Frame):
+	## Inits Window with all relevant variables
     def __init__(self, master = None):
         Frame.__init__(self,master)
         self.master = master
@@ -22,7 +28,7 @@ class Window(Frame):
         #master.bind('g', self.passQuizz)
         #master.bind('f', self.failQuizz)
         
-        self.quizzCount = 0
+        self.quizzCount = 0 ## quizzCount initialized to 0
         self.randoKanji = ''
         self.randoWord = word('','','')
         
@@ -51,6 +57,7 @@ class Window(Frame):
         self.checkButton = Button(self, text = "check(space)", command = self.check)
         self.presentQuizz()
 
+	## separate init_window function (why? lol)
     def init_window(self):
         self.master.title("GUI") #changes title
         self.pack(fill=BOTH,expand = 1)#uses full space of root window
@@ -66,22 +73,27 @@ class Window(Frame):
         quitButton = Button(self, text="Quit(esc)", command = self.client_exit)
         quitButton.place(x=0,y=0)
         
+	## wtf is this?
     def client_exit(self, event=None):
         quizzer.outputFile('dummy.csv')
         exit()
-        
+    
+	## shows english
     def showEnglish(self):
         self.englishText.set(self.randoWord.getEnglish())
         self.englishTextLabel.place(relx=0.5, rely = 0.1, anchor = N)
 
+	## shows kanji
     def showKanji(self):
         self.kanjiText.set(self.randoWord.getKanji())
         self.kanjiTextLabel.place(relx=0.5, rely = 0.3, anchor = N)
 
+	## shows kana
     def showKana(self):
         self.kanaText.set(self.randoWord.getKana())
         self.kanaTextLabel.place(relx=0.5, rely = 0.5, anchor = N)
 
+	## displays progress
     def showProgress(self):
         stats = "Remaining Kanji:  " + str(quizzer.getNumberKanjiWithQuizzesRemining()) 
         stats += "/" + str(quizzer.getNumberOriginalKanji()) + "\n"
@@ -92,23 +104,28 @@ class Window(Frame):
         self.progressText.set(stats)  #todo expand to more stats
         self.progressTextLabel.place(relx=1.0, rely = 1.0, anchor = SE)
         
+	## hides kanji part
     def hideKanji():
         self.kanjiText.set(self.randoWord.getKanji())
         self.kanjiTextLabel.place(relx=0.5, rely = 0.3, anchor = N)
     
+	## hides kana
     def hideKana():
         self.kanaText.set(self.randoWord.getKana())
         self.kanaTextLabel.place(relx=0.5, rely = 0.5, anchor = N)
         
+	## passes quiz!
     def passQuizz(self, event = None): 
         quizzer.decrementWord(self.randoWord)
         quizzer.logPass(self.randoKanji,self.randoWord.getKanji())
         self.presentQuizz()
     
+	## FAILS quizz
     def failQuizz(self, event = None):
         quizzer.logFail(self.randoKanji,self.randoWord.getKanji())
         self.presentQuizz()
 
+	## presents quizz
     def presentQuizz(self, event = None):
         self.randoKanji = quizzer.getRandomKanji()
         self.randoWord = quizzer.getRandomWord(self.randoKanji)
@@ -123,6 +140,7 @@ class Window(Frame):
         self.master.unbind('g')
         self.master.unbind('f')
 
+	## runs check lol
     def check(self, event = None):
         self.showKanji()
         self.showKana()
@@ -133,6 +151,7 @@ class Window(Frame):
         self.master.bind('g', self.passQuizz)
         self.master.bind('f', self.failQuizz)
         self.quizzCount += 1
+
 
 importFileName = 'kanji_list.csv'
 if len(sys.argv) > 1:
