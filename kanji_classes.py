@@ -5,73 +5,73 @@
 import csv
 import random
 
-## A word, with English, kanji, & kana data
-#
-#  words are imported into kanjiData's  list kanjiWordList	
-class word
+##A word, with English, kanji, & kana translations  
+class word:
 
-    ## Constructor
+    ##Constructor
     def __init__(self, english, kanji, kana):
-		## word in English
+        ##English translation
         self.english = english 
-		## word in Kanji
+        ##Kanji translation
         self.Kanji = kanji
-		## word in Kana
-		self.Kana = kana
+        ##Kana translation
+        self.kana = kana
         
-    ##Returns English value
+    ##Returns English translation
     def getEnglish(self):
         return self.english
     
-    ##Returns Kanji value
+    ##Returns Kanji translation
     def getKanji(self):
         return self.Kanji
         
-    ##Returns Kana value
+    ##Returns Kana translation
     def getKana(self):
-        return self.Kana
+        return self.kana
 
-##kanjiData with data regarding quizzing schedule
-#should put more stuff here once I figure it out, lol    
+##Kanji's data, including affiliated words & quizzing schedule
 class kanjiData:
+    ##Counter for kanjiData elements.  Incremented during each initialization.
     kanjiCount = 0
 
-	##instatiate to blank with a live count
+    ##instatiate to blank with a live count
     def __init__(self):
+        ##Remaining quizzes for this kanji
         self.remainingCount = 0
+        ##Words affiliated with this kanji
         self.kanjiWordList = [] #() may also work
+        ##Increments kanjiData class's kanjiCount
         kanjiData.kanjiCount += 1
 
-	##adds word to object's kanjiWordList
+    ##adds word to object's kanjiWordList
     def addWord(self, inputWord):
         self.kanjiWordList.append(inputWord)
 
-	##adds word to object's kanjiWordList
+    ##returns this kanjiData's kanjiWordList
     def getWordList(self):
         return self.kanjiWordList
         
-	##adds word to object's remainingCount
+    ##returns this kanjiData's remainingCount
     def getRemainingCount(self):
         return(self.remainingCount)
 
-	##sets remainingCount to input
+    ##sets this kanjiData's remainingCount to input
     def setRemainingCount(self,count):
         self.remainingCount = count
     
-	##decrements object's remainingCount
+    ##decrements this kanjiData's remainingCount
     def decrementRemainingCount(self):
         self.remainingCount-=1
 
-	##increments object's remainingCount
+    ##increments this kanjiData's remainingCount
     def incrementRemainingCount(self):
         self.remainingCount+=1
         
-	##returns class' kanjiCount
+    ##returns this kanjiData's kanjiCount
     def getKanjiCount(self):
         return kanjiCount
         
-##quizz class (lol)
-#should ALSO put more stuff here once I figure it out, lol
+##quizz class
 class quizz:
     ##generate self from given files
     def __init__(self,kanjiFile):
@@ -150,7 +150,7 @@ class quizz:
     def logPass(self,kanji,word):
         self.log.append(("PASS",kanji,word,self.getNumberKanjiWithQuizzesRemining(),self.getNumberQuizzesRemaining()))
 
-	##fails
+    ##fails
     def logFail(self,kanji,word):
         self.log.append(("FAIL",kanji,word,self.getNumberKanjiWithQuizzesRemining(),self.getNumberQuizzesRemaining()))
 
@@ -203,14 +203,17 @@ def outputTankList(inputDict, fileName):
                 spamwriter.writerow(datList)
     f.close()
 
-##creates log
+##Outputs log file
 def outputLog(logList, fileName):
+    ##Opens input filename
     f = open(fileName,"w+")
     with open(fileName, 'w', newline='', encoding='utf-8') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
         datList = ("kanji","word","result")
+        ##Writes header
         spamwriter.writerow(datList)        
         for log in logList:
+            ##writes data for each item in logList
             spamwriter.writerow(log)
             #spamwriter.writerow(datList)
     f.close()

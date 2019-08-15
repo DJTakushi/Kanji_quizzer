@@ -18,21 +18,41 @@ except ImportError:
 
 ## Window class documentation
 class Window(Frame):
-	## Inits Window with all relevant variables
+    ## Inits Window with all relevant variables
+    ##binds Escape to client
+    ## quizzCount initialized to 0
+    ##random Kanji that will be quizzed
+    ##randmo word from selected Kanji
     def __init__(self, master = None):
         Frame.__init__(self,master)
         self.master = master
         #master.bind('1', self.presentQuizz)
         #master.bind('<space>', self.check)
-        master.bind('<Escape>', self.client_exit)
+        master.bind('<Escape>', self.client_exit) 
         #master.bind('g', self.passQuizz)
         #master.bind('f', self.failQuizz)
-        
-        self.quizzCount = 0 ## quizzCount initialized to 0
+
+        self.quizzCount = 0 
+
         self.randoKanji = ''
+
         self.randoWord = word('','','')
+
+        self.master.title("GUI") #changes title
+        self.pack(fill=BOTH,expand = 1)#uses full space of root window
+        menu = Menu(self.master)
+        self.master.config(menu = menu)
+        file = Menu(menu)
+        file.add_command(label="Exit",command=self.client_exit)
+        menu.add_cascade(label="File",menu=file)
+        edit =Menu(menu)
+        edit.add_command(label="Undo")
+        menu.add_cascade(label="Edit", menu=edit)
         
-        self.init_window()
+        quitButton = Button(self, text="Quit(esc)", command = self.client_exit)
+        quitButton.place(x=0,y=0)
+        
+        #self.init_window()
         self.mainTextFont = ('times',40,'bold')
         self.secondaryTextFont = ('times',10,'bold')
 
@@ -57,43 +77,48 @@ class Window(Frame):
         self.checkButton = Button(self, text = "check(space)", command = self.check)
         self.presentQuizz()
 
-	## separate init_window function (why? lol)
-    def init_window(self):
-        self.master.title("GUI") #changes title
-        self.pack(fill=BOTH,expand = 1)#uses full space of root window
-        menu = Menu(self.master)
-        self.master.config(menu = menu)
-        file = Menu(menu)
-        file.add_command(label="Exit",command=self.client_exit)
-        menu.add_cascade(label="File",menu=file)
-        edit =Menu(menu)
-        edit.add_command(label="Undo")
-        menu.add_cascade(label="Edit", menu=edit)
+    # separate init_window function (why? lol)
+    #def init_window(self):
+    #    self.master.title("GUI") #changes title
+    #    self.pack(fill=BOTH,expand = 1)#uses full space of root window
+    #    menu = Menu(self.master)
+    #    self.master.config(menu = menu)
+    #    file = Menu(menu)
+    #    file.add_command(label="Exit",command=self.client_exit)
+    #    menu.add_cascade(label="File",menu=file)
+    #    edit =Menu(menu)
+    #    edit.add_command(label="Undo")
+    #    menu.add_cascade(label="Edit", menu=edit)
+    #    
+    #    quitButton = Button(self, text="Quit(esc)", command = self.client_exit)
+    #    quitButton.place(x=0,y=0)
         
-        quitButton = Button(self, text="Quit(esc)", command = self.client_exit)
-        quitButton.place(x=0,y=0)
-        
-	## wtf is this?
+    ##calls quizzer to output to 'dummy.csv'
+    ##runs exit()
     def client_exit(self, event=None):
         quizzer.outputFile('dummy.csv')
         exit()
     
-	## shows english
+    ## shows randoWord's English
     def showEnglish(self):
         self.englishText.set(self.randoWord.getEnglish())
         self.englishTextLabel.place(relx=0.5, rely = 0.1, anchor = N)
 
-	## shows kanji
+    ## shows randoWord's Kanji
     def showKanji(self):
         self.kanjiText.set(self.randoWord.getKanji())
         self.kanjiTextLabel.place(relx=0.5, rely = 0.3, anchor = N)
 
-	## shows kana
+    ## shows randoWord's Kana
     def showKana(self):
         self.kanaText.set(self.randoWord.getKana())
         self.kanaTextLabel.place(relx=0.5, rely = 0.5, anchor = N)
 
-	## displays progress
+    ## displays progress
+    ##Adds Kanji to string
+    ##Adds Quizzes to string
+    ##Adds Quizzes to string
+    ##Prints string
     def showProgress(self):
         stats = "Remaining Kanji:  " + str(quizzer.getNumberKanjiWithQuizzesRemining()) 
         stats += "/" + str(quizzer.getNumberOriginalKanji()) + "\n"
@@ -104,35 +129,43 @@ class Window(Frame):
         self.progressText.set(stats)  #todo expand to more stats
         self.progressTextLabel.place(relx=1.0, rely = 1.0, anchor = SE)
         
-	## hides kanji part
+    ## Hides Kanji label
     def hideKanji():
         self.kanjiText.set(self.randoWord.getKanji())
         self.kanjiTextLabel.place(relx=0.5, rely = 0.3, anchor = N)
     
-	## hides kana
+    ## Hides Kana label
     def hideKana():
         self.kanaText.set(self.randoWord.getKana())
         self.kanaTextLabel.place(relx=0.5, rely = 0.5, anchor = N)
         
-	## passes quiz!
-    def passQuizz(self, event = None): 
+    ## PASSES quiz!
+    ##decrementWord randoWord
+    ##logPass on randoKanji & randoWord's kanji
+    ##presentQuizz()
+    def passQuizz(self, event = None):
         quizzer.decrementWord(self.randoWord)
         quizzer.logPass(self.randoKanji,self.randoWord.getKanji())
         self.presentQuizz()
     
-	## FAILS quizz
+    ## FAILS quizz
+    ##logFail on randoKanji and randoWord's kanji
+    ##presentQuizz()
     def failQuizz(self, event = None):
         quizzer.logFail(self.randoKanji,self.randoWord.getKanji())
         self.presentQuizz()
 
-	## presents quizz
+    ##Populates randoKanji and gets randoWord from getRandomWord(self.randoKanji).
+    ##Places English & progress on screen.
+    ##Hides kanji, kana.
+    ##Binds space to self.check, and unbinds g & f.
     def presentQuizz(self, event = None):
         self.randoKanji = quizzer.getRandomKanji()
         self.randoWord = quizzer.getRandomWord(self.randoKanji)
         self.showEnglish()
+        self.showProgress()
         self.kanjiTextLabel.place_forget()
         self.kanaTextLabel.place_forget()
-        self.showProgress()
         self.goodButton.place_forget()
         self.failButton.place_forget()
         self.checkButton.place(relx= 0.5, rely = 0.75, anchor = N)
@@ -140,7 +173,7 @@ class Window(Frame):
         self.master.unbind('g')
         self.master.unbind('f')
 
-	## runs check lol
+    ## runs check lol
     def check(self, event = None):
         self.showKanji()
         self.showKana()
